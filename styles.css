@@ -1,0 +1,10 @@
+body {
+font-family:'Courier New', Courier, monospace;
+color: rgb(156, 58, 86);
+max-width: 700px;
+margin:40px auto;
+}
+
+h1 {
+    color: rgb(114, 16, 188);
+}
