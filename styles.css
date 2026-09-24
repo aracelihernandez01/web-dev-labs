@@ -1,3 +1,6 @@
+/*Araceli Hernandez-Lab 5 */
+
+
 body {
 font-family:'Courier New', Courier, monospace;
 color: rgb(156, 58, 86);
@@ -6,5 +9,55 @@ margin:40px auto;
 }
 
 h1 {
-    color: rgb(114, 16, 188);
+    color: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+}
+header {
+    padding: 16px;
+    background-color:rgb(255, 172, 199);
+    color: azure;
+    margin-bottom: 16px;
+
+}
+
+#main-nav{
+    background-color:rgb(255, 172, 199);
+}
+
+#main-nav a{
+    color: rgb(247, 246, 246);
+    text-decoration: none;
+    padding: 12px;
+}
+#main-nav a:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+#main-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    background-color: rgb(254, 154, 196)
+}
+
+table {
+    boarder-collapse: collapse;
+    width: 100%  
+}
+th, td {
+    padding: 10 px;
+    border: 1px solid #000000;
+}
+thead {
+    background-color: #fca1cb;
+}
+input, texttrace, select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding:8px;
+    margin-bottom: 16px;
 }
