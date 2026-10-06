@@ -103,3 +103,7 @@ header {
 #main-nav a {
   transition: background-color 0.2s ease;
 }
+body.dark {
+  background-color: #111827;
+  color: #f1f5f9;
+}
