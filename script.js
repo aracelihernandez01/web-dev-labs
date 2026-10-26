@@ -1,4 +1,6 @@
-//Araceli Hernandez Lab 8
+//Araceli Hernandez Lab 9
+
+
 const name = "Ada";
 let labsCompleted = 6;
 let isEnrolled = false;
@@ -52,3 +54,45 @@ goals.forEach(function(goal) {
   item.textContent = goal;
   goalsList.appendChild(item);
 });
+
+
+
+
+
+function getGreetingAfterDelay() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("Hello from the future!");
+    }, 800);
+  });
+}
+
+
+
+async function showGreeting() {
+  const message = await getGreetingAfterDelay();
+  console.log(message);
+}
+
+showGreeting();
+
+
+const factBtn = document.querySelector("#fact-btn");
+const factDisplay = document.querySelector("#fact-display");
+
+async function loadFact() {
+  factDisplay.textContent = "Loading...";
+  try {
+    const response = await fetch("https://catfact.ninja/fact");
+    if (!response.ok) {
+      throw new Error("Server responded with an error");
+    }
+    const data = await response.json();
+    factDisplay.textContent = data.fact;
+  } catch (error) {
+    factDisplay.textContent = "Couldn't load a fact right now. Try again.";
+    console.error(error);
+  }
+}
+
+factBtn.addEventListener("click", loadFact);
